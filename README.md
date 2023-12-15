@@ -70,6 +70,9 @@ Berikut adalah tabel Harga Spesifikasi VM dari Digital Oceon  :
 
 ## v. Hasil Pengujian dan analisis Loadtesting menggunakan Locust
 
+- **report-1000user-25spawnrate-60second**
+<img width="1025" alt="Screenshot 2023-12-15 at 15 59 21" src="https://github.com/stephaniehebrina/finalproject-b5/assets/143694784/fc060a04-7088-4102-8122-e513f6984366">
+
 - **report-1000user-50spawnrate-60second**
 
 ![Screenshot 2023-12-15 at 05.13.07.png](Final%20Project%20Teknologi%20Komputasi%20Awan%20Kelas%20B%20Kel%2060b232652434444d9c28bbb509c3b1e0/Screenshot_2023-12-15_at_05.13.07.png)
@@ -77,6 +80,9 @@ Berikut adalah tabel Harga Spesifikasi VM dari Digital Oceon  :
 - **report-1000user-100spawnrate-60second**
 
 ![Screenshot 2023-12-15 at 05.17.48.png](Final%20Project%20Teknologi%20Komputasi%20Awan%20Kelas%20B%20Kel%2060b232652434444d9c28bbb509c3b1e0/Screenshot_2023-12-15_at_05.17.48.png)
+
+- **report-1000user-25spawnrate-60second**
+<img width="519" alt="Screenshot 2023-12-15 at 16 01 31" src="https://github.com/stephaniehebrina/finalproject-b5/assets/143694784/cd3303c8-1cc1-48a8-8ca5-ca1bf400bc52">
 
 - **report-1000user-50spawnrate-60second**
 
@@ -86,6 +92,17 @@ Berikut adalah tabel Harga Spesifikasi VM dari Digital Oceon  :
 
 ![Screenshot 2023-12-15 at 05.19.34.png](Final%20Project%20Teknologi%20Komputasi%20Awan%20Kelas%20B%20Kel%2060b232652434444d9c28bbb509c3b1e0/Screenshot_2023-12-15_at_05.19.34.png)
 
+- **report-1000user-25spawnrate-60second**
+  
+Final ratio
+Ratio per User class
+100.0% MyUser
+50.0% get_orders
+50.0% create_order
+Total ratio
+100.0% MyUser
+50.0% get_orders
+50.0% create_order
 - **report-1000user-50spawnrate-60second**
 
 ## Final ratio
