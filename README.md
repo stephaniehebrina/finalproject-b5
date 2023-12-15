@@ -28,21 +28,21 @@ Berikut adalah tabel Harga Spesifikasi VM dari Digital Oceon  :
 
 ![fp-2.jpeg](Final%20Project%20Teknologi%20Komputasi%20Awan%20Kelas%20B%20Kel%2060b232652434444d9c28bbb509c3b1e0/fp-2.jpeg)
 
-1. Create ‘New Connection’ dengan string database yang sudah ada sebelumnya 
+2. Create ‘New Connection’ dengan string database yang sudah ada sebelumnya 
 
 ![fp-3.jpeg](Final%20Project%20Teknologi%20Komputasi%20Awan%20Kelas%20B%20Kel%2060b232652434444d9c28bbb509c3b1e0/fp-3.jpeg)
 
-1. Membuat Database yang sudah dibuat di app.py
+3. Membuat Database yang sudah dibuat di app.py
 
 ![fp-4.jpeg](Final%20Project%20Teknologi%20Komputasi%20Awan%20Kelas%20B%20Kel%2060b232652434444d9c28bbb509c3b1e0/fp-4.jpeg)
 
-1. Create database baru dengan cara copy data dummy ke mongodb compass 
+4. Create database baru dengan cara copy data dummy ke mongodb compass 
 
-1. Download app.py, Run [app.py](http://app.py) dari github, serta mengganti mongodb API-nya
+5. Download app.py, Run [app.py](http://app.py) dari github, serta mengganti mongodb API-nya
 
 ![fp-5.jpeg](Final%20Project%20Teknologi%20Komputasi%20Awan%20Kelas%20B%20Kel%2060b232652434444d9c28bbb509c3b1e0/fp-5.jpeg)
 
-1. Check kalau sudah berhasil install mongodb, load balancer dan worker
+6. Check kalau sudah berhasil install mongodb, load balancer dan worker
 
 ![fp-1.jpeg](Final%20Project%20Teknologi%20Komputasi%20Awan%20Kelas%20B%20Kel%2060b232652434444d9c28bbb509c3b1e0/fp-1.jpeg)
 
