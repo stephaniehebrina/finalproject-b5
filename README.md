@@ -2,13 +2,6 @@
 
 **Anggota :**
 
-| Subkhan Mas Udi | 5027221044 |
-| --- | --- |
-| Ahmad Fauzan Daniswara | 5027221057 |
-| Muhammad Ida Bagus Rafi Habibie | 502722159 |
-| Jonathan Adithya Baswara | 5027221062 |
-| Stephanie Hebrina Mabunbun Simatupang | 5027221069 |
-| Khansa Adia Rahma | 5027221071 |
 
 ## i. Permasalahan
 
@@ -125,3 +118,11 @@ Berikut adalah tabel Harga Spesifikasi VM dari Digital Oceon  :
 - 100.0% MyUser
     - 50.0% get_orders
     - 50.0% create_order
+ 
+Pada 1000user 50spawnrate 60s total request per second dimulai dari 0 hingga 15 terlebih dahulu, dan tidak se stabil pada 100 spawnrate yang langsung dari awal sudah dimulai dengan 13 rps. Untuk response time antara 50 dan 100 spawnrate mirip dan terlihat memiliki response time yang sama.
+Selanjutnya pada bagian number of users pada 50 spawnrate terlihat untuk mencapai dari 0 hingga 1000 users membutuhkan waktu yang sedikit lebih lama dibandingkan 100 spawnrate.
+
+
+## vi. Kesimpulan dan Saran
+Kesimpulan rancangan cloud dan aplikasi melibatkan langkah-langkah penting, seperti membuat database dan connection string, menciptakan koneksi baru dengan string database yang sudah ada, serta menciptakan database baru melalui MongoDB Compass dengan data dummy. Proses ini melibatkan instalasi MongoDB, load balancer, dan worker. Selain itu, langkah kedua melibatkan pengunduhan dan eksekusi app.py dari GitHub, dengan penyesuaian API MongoDB. Keseluruhan, rancangan ini fokus pada integrasi efisien antara aplikasi dan layanan cloud untuk memastikan fungsi yang optimal.
+
