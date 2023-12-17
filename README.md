@@ -56,23 +56,23 @@ Berikut adalah tabel Harga Spesifikasi VM dari Digital Oceon  :
 
 - Get All Orders
 
-![orders.jpeg](Final%20Project%20Teknologi%20Komputasi%20Awan%20Kelas%20B%20Kel%2060b232652434444d9c28bbb509c3b1e0/orders.jpeg)
+![all-orders](https://github.com/stephaniehebrina/finalproject-b5/assets/143694784/050e33a7-4fba-4047-96e9-525dc987e9cd)
 
 - Get a Specific Orders by ID
 
-![spec.jpeg](Final%20Project%20Teknologi%20Komputasi%20Awan%20Kelas%20B%20Kel%2060b232652434444d9c28bbb509c3b1e0/spec.jpeg)
+![orders-id](https://github.com/stephaniehebrina/finalproject-b5/assets/143694784/37db661e-b4ee-4538-acdc-fa81c5d64bc4)
 
 - Create a New Order
 
-![new.jpeg](Final%20Project%20Teknologi%20Komputasi%20Awan%20Kelas%20B%20Kel%2060b232652434444d9c28bbb509c3b1e0/new.jpeg)
+![neworder](https://github.com/stephaniehebrina/finalproject-b5/assets/143694784/24ae7cae-acd7-494e-9134-280d0bc3b217)
 
 - Update an Order by ID
 
-![update.jpeg](Final%20Project%20Teknologi%20Komputasi%20Awan%20Kelas%20B%20Kel%2060b232652434444d9c28bbb509c3b1e0/update.jpeg)
+![updatee](https://github.com/stephaniehebrina/finalproject-b5/assets/143694784/d82b17b7-4b3e-4329-a0c4-9d757471e279)
 
 - Delete an Order by ID
 
-![delete.jpeg](Final%20Project%20Teknologi%20Komputasi%20Awan%20Kelas%20B%20Kel%2060b232652434444d9c28bbb509c3b1e0/delete.jpeg)
+![del](https://github.com/stephaniehebrina/finalproject-b5/assets/143694784/a8961dc5-4a4f-4c5c-90b7-9375c3111c88)
 
 ## v. Hasil Pengujian dan analisis Loadtesting menggunakan Locust
 
