@@ -4,8 +4,8 @@
 | Nama | NRP |
 | --- | --- |
 | Subkhan Mas Udi | 5027221044 |
-| Ahmad Fauzan Daniswara | 5027221057 |
-| Muhammad Ida Bagus Rafi Habibie | 502722159 |
+| Ahmad Fauzan Daniswara | Tidak Bekerja |
+| Muhammad Ida Bagus Rafi Habibie | Tidak Bekerja |
 | Jonathan Adithya Baswara | 5027221062 |
 | Stephanie Hebrina Mabunbun Simatupang | 5027221069 |
 | Khansa Adia Rahma | 5027221071 |
