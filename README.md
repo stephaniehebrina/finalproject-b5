@@ -53,13 +53,13 @@ Berikut adalah tabel Harga Spesifikasi VM dari Digital Oceon  :
 menurut dokumentasi Gunicorn, jumlah worker yang optimal adalah (2 * numofcpucore) + 1.
 
 6. kita arahkan alamat health checks load balancer kita ke Endpoint agar load balancer dapat terhubung dengan [app.py](http://app.py) yang ada di worker
-
+- worker masih down
 ![6.jpeg](Final%20Project%20Teknologi%20Komputasi%20Awan%20Kelas%20B%20Kel%2060b232652434444d9c28bbb509c3b1e0/6.jpeg)
-worker masih down
+- ganti alamat health check
 ![7.jpeg](Final%20Project%20Teknologi%20Komputasi%20Awan%20Kelas%20B%20Kel%2060b232652434444d9c28bbb509c3b1e0/7.jpeg)
-ganti alamat health check
+- Load balancer sudah bekerja
 ![8.jpeg](Final%20Project%20Teknologi%20Komputasi%20Awan%20Kelas%20B%20Kel%2060b232652434444d9c28bbb509c3b1e0/8.jpeg)
-Load balancer sudah bekerja
+
 
 
 ## iv. Hasil Pengujian endpoint setiap API
