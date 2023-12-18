@@ -31,11 +31,11 @@ Berikut adalah tabel Harga Spesifikasi VM dari Digital Oceon  :
 
 ## iii. Instalasi / implementasi rancangan cloud dan aplikasi
 
-1. Membuat Database dan connection string 📊
+1. Membuat Database 📊
 
 ![fp-2.jpeg](Final%20Project%20Teknologi%20Komputasi%20Awan%20Kelas%20B%20Kel%2060b232652434444d9c28bbb509c3b1e0/fp-2.jpeg)
 
-2. Create ‘New Connection’ dengan string database yang sudah ada sebelumnya 
+2. Create ‘New Connection’ dengan connection string database mongodb yang sudah ada sebelumnya 
 
 ![fp-3.jpeg](Final%20Project%20Teknologi%20Komputasi%20Awan%20Kelas%20B%20Kel%2060b232652434444d9c28bbb509c3b1e0/fp-3.jpeg)
 
