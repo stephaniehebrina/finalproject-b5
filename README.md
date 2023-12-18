@@ -24,7 +24,7 @@ Kemudian anda diminta untuk mendesain arsitektur cloud yang sesuai dengan kebutu
 
 Berikut adalah rancangan arsitektur untuk kelompok kami : 
 
-![Your paragraph text.png](Final%20Project%20Teknologi%20Komputasi%20Awan%20Kelas%20B%20Kel%2060b232652434444d9c28bbb509c3b1e0/Your_paragraph_text.png)
+![Rancangan.jpg](Final%20Project%20Teknologi%20Komputasi%20Awan%20Kelas%20B%20Kel%2060b232652434444d9c28bbb509c3b1e0/Rancangan.jpg)
 
 Berikut adalah tabel Harga Spesifikasi VM dari Digital Oceon  : 
 <img width="817" alt="table" src="https://github.com/stephaniehebrina/finalproject-b5/assets/143694784/40b690b8-9825-48c4-9db4-96b2f62bf2ce">
