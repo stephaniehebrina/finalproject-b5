@@ -46,8 +46,10 @@ Berikut adalah tabel Harga Spesifikasi VM dari Digital Oceon  :
 4. Membuat droplet dan load balancer
 ![4.png](Final%20Project%20Teknologi%20Komputasi%20Awan%20Kelas%20B%20Kel%2060b232652434444d9c28bbb509c3b1e0/4.png)
 
-5. Download app.py, ganti mongodb url nya sesuai dengan connection string mongodb kita, run [app.py](http://app.py) dari github menggunakan gunicorn di setiap worker kita dengan port 80 (harus sama dengan load-balancer).
-
+5. Download app.py, ganti mongodb URI nya sesuai dengan connection string mongodb kita, run [app.py](http://app.py) dari github menggunakan gunicorn di setiap worker kita dengan port 80 (harus sama dengan load-balancer).
+- mengganti MONGO_URI dengan connection string mongodb kita 
+![apppymongo.png](Final%20Project%20Teknologi%20Komputasi%20Awan%20Kelas%20B%20Kel%2060b232652434444d9c28bbb509c3b1e0/apppymongo.png)
+- menjalankan [app.py](http://app.py) dengan gunicorn
 ![fp-5.jpeg](Final%20Project%20Teknologi%20Komputasi%20Awan%20Kelas%20B%20Kel%2060b232652434444d9c28bbb509c3b1e0/fp-5.jpeg)
 
 menurut dokumentasi Gunicorn, jumlah worker yang optimal adalah (2 * numofcpucore) + 1.
