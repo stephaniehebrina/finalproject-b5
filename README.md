@@ -1,8 +1,9 @@
 # Final Project Teknologi Komputasi Awan Kelas B Kelompok 5
 
 **Anggota :**
-| Subkhan Mas Udi | 5027221044 |
+| Nama | NRP |
 | --- | --- |
+| Subkhan Mas Udi | 5027221044 |
 | Ahmad Fauzan Daniswara | 5027221057 |
 | Muhammad Ida Bagus Rafi Habibie | 502722159 |
 | Jonathan Adithya Baswara | 5027221062 |
@@ -75,75 +76,81 @@ Berikut adalah tabel Harga Spesifikasi VM dari Digital Oceon  :
 ![del](https://github.com/stephaniehebrina/finalproject-b5/assets/143694784/a8961dc5-4a4f-4c5c-90b7-9375c3111c88)
 
 ## v. Hasil Pengujian dan analisis Loadtesting menggunakan Locust
+- **1500 User, 25 Spawn rate, 60s**
+  <br />
+  a) Request Statistics & Response Time Statistics
+  <br />
+     <img width="1024" alt="Screenshot 2023-12-18 at 08 36 10" src="https://github.com/stephaniehebrina/finalproject-b5/assets/143694784/3129db9d-89c0-42b2-a5a4-a5525b0805e0">
 
-- **report-1000user-25spawnrate-60second**
-<img width="1025" alt="Screenshot 2023-12-15 at 15 59 21" src="https://github.com/stephaniehebrina/finalproject-b5/assets/143694784/fc060a04-7088-4102-8122-e513f6984366">
+  <br />
+  Request Statics : hasil dari pengujian kinerja menggunakan Locust, sebuah alat uji beban dan kinerja open-source yang umumnya digunakan untuk mengukur sejauh mana sistem dapat menangani beban tertentu, Response Time Statistics : memberikan gambaran tentang berbagai persentil (percentiles) waktu yang diperlukan untuk menanggapi permintaan pada suatu endpoint atau sumber daya tertentu
+  <br />
 
-- **report-1000user-50spawnrate-60second**
+  b) Charts
+  <br />
+  <img width="538" alt="Screenshot 2023-12-18 at 08 53 12" src="https://github.com/stephaniehebrina/finalproject-b5/assets/143694784/c904af77-c74f-4a5f-921c-5bb7ec75f66e">
+  <br /> 
+  c) Ratio per User class (Rasio per Kelas Pengguna):
 
-![Screenshot 2023-12-15 at 05.13.07.png](Final%20Project%20Teknologi%20Komputasi%20Awan%20Kelas%20B%20Kel%2060b232652434444d9c28bbb509c3b1e0/Screenshot_2023-12-15_at_05.13.07.png)
+- 100.0% MyUser: Semua beban kerja atau permintaan berasal dari kelas pengguna "MyUser."
+- 50.0% get_orders: Separuh dari beban kerja berasal dari metode atau permintaan "get_orders."
+- 50.0% create_order: Separuh sisanya berasal dari metode atau permintaan "create_order."
+<br />
+ Total ratio (Total Rasio):
 
-- **report-1000user-100spawnrate-60second**
+- 100.0% MyUser: Keseluruhan beban kerja atau permintaan sepenuhnya berasal dari kelas pengguna "MyUser."
+- 50.0% get_orders: Separuh dari seluruh beban kerja terdiri dari metode atau permintaan "get_orders."
+- 50.0% create_order: Separuh sisanya berasal dari metode atau permintaan "create_order."
 
-![Screenshot 2023-12-15 at 05.17.48.png](Final%20Project%20Teknologi%20Komputasi%20Awan%20Kelas%20B%20Kel%2060b232652434444d9c28bbb509c3b1e0/Screenshot_2023-12-15_at_05.17.48.png)
+- **3000 user, 50 Spawn rate, 60s**
+ <br />
+  a) Request Statistics & Response Time Statistics
+  <br />
+<img width="1024" alt="Screenshot 2023-12-18 at 08 49 32" src="https://github.com/stephaniehebrina/finalproject-b5/assets/143694784/49907113-bb2e-424f-89d9-2b839cf29905">
 
-- **report-1000user-25spawnrate-60second**
-<img width="519" alt="Screenshot 2023-12-15 at 16 01 31" src="https://github.com/stephaniehebrina/finalproject-b5/assets/143694784/cd3303c8-1cc1-48a8-8ca5-ca1bf400bc52">
+  <br />
+  Request Statics : hasil dari pengujian kinerja menggunakan Locust, sebuah alat uji beban dan kinerja open-source yang umumnya digunakan untuk mengukur sejauh mana sistem dapat menangani beban tertentu, Response Time Statistics : memberikan gambaran tentang berbagai persentil (percentiles) waktu yang diperlukan untuk menanggapi permintaan pada suatu endpoint atau sumber daya tertentu
+  <br />
+  b) Charts
+  <br />
+  <img width="538" alt="Screenshot 2023-12-18 at 08 52 23" src="https://github.com/stephaniehebrina/finalproject-b5/assets/143694784/57ee485f-63d6-4528-b4ec-883f20c31736">
 
-- **report-1000user-50spawnrate-60second**
+  <br /> 
+  c) Ratio per User class (Rasio per Kelas Pengguna):
 
-![Screenshot 2023-12-15 at 05.18.56.png](Final%20Project%20Teknologi%20Komputasi%20Awan%20Kelas%20B%20Kel%2060b232652434444d9c28bbb509c3b1e0/Screenshot_2023-12-15_at_05.18.56.png)
+- 100.0% MyUser: Semua beban kerja atau permintaan berasal dari kelas pengguna "MyUser."
+- 50.0% get_orders: Separuh dari beban kerja berasal dari metode atau permintaan "get_orders."
+- 50.0% create_order: Separuh sisanya berasal dari metode atau permintaan "create_order."
+<br />
+ Total ratio (Total Rasio):
 
-- **report-1000user-100spawnrate-60second**
-
-![Screenshot 2023-12-15 at 05.19.34.png](Final%20Project%20Teknologi%20Komputasi%20Awan%20Kelas%20B%20Kel%2060b232652434444d9c28bbb509c3b1e0/Screenshot_2023-12-15_at_05.19.34.png)
-
-- **report-1000user-25spawnrate-60second**
+- 100.0% MyUser: Keseluruhan beban kerja atau permintaan sepenuhnya berasal dari kelas pengguna "MyUser."
+- 50.0% get_orders: Separuh dari seluruh beban kerja terdiri dari metode atau permintaan "get_orders."
+- 50.0% create_order: Separuh sisanya berasal dari metode atau permintaan "create_order."
   
-Final ratio
-Ratio per User class
-100.0% MyUser
-50.0% get_orders
-50.0% create_order
-Total ratio
-100.0% MyUser
-50.0% get_orders
-50.0% create_order
-- **report-1000user-50spawnrate-60second**
+- **6000 user, 100 spawn rate, 60 sec**
+- a) Request Statistics & Response Time Statistics
+  <br />
+<img width="1024" alt="Screenshot 2023-12-18 at 08 50 24" src="https://github.com/stephaniehebrina/finalproject-b5/assets/143694784/d6f7558a-45d1-4626-921a-a70c633202b0">
+  <br />
+  Request Statics : hasil dari pengujian kinerja menggunakan Locust, sebuah alat uji beban dan kinerja open-source yang umumnya digunakan untuk mengukur sejauh mana sistem dapat menangani beban tertentu, Response Time Statistics : memberikan gambaran tentang berbagai persentil (percentiles) waktu yang diperlukan untuk menanggapi permintaan pada suatu endpoint atau sumber daya tertentu
+  <br />
+  b) Charts
+  <br />
+  <img width="538" alt="Screenshot 2023-12-18 at 08 51 28" src="https://github.com/stephaniehebrina/finalproject-b5/assets/143694784/27081a06-698f-4aac-937e-e7557c11b2e7">
 
-## Final ratio
+  <br /> 
+  c) Ratio per User class (Rasio per Kelas Pengguna):
 
-### Ratio per User class
+- 100.0% MyUser: Semua beban kerja atau permintaan berasal dari kelas pengguna "MyUser."
+- 50.0% get_orders: Separuh dari beban kerja berasal dari metode atau permintaan "get_orders."
+- 50.0% create_order: Separuh sisanya berasal dari metode atau permintaan "create_order."
+<br />
+ Total ratio (Total Rasio):
 
-- 100.0% MyUser
-    - 50.0% get_orders
-    - 50.0% create_order
-
-### Total ratio
-
-- 100.0% MyUser
-    - 50.0% get_orders
-    - 50.0% create_order
-    
-- **report-1000user-100spawnrate-60second**
-
-## Final ratio
-
-### Ratio per User class
-
-- 100.0% MyUser
-    - 50.0% get_orders
-    - 50.0% create_order
-
-### Total ratio
-
-- 100.0% MyUser
-    - 50.0% get_orders
-    - 50.0% create_order
- 
-Pada 1000user 50spawnrate 60s total request per second dimulai dari 0 hingga 15 terlebih dahulu, dan tidak se stabil pada 100 spawnrate yang langsung dari awal sudah dimulai dengan 13 rps. Untuk response time antara 50 dan 100 spawnrate mirip dan terlihat memiliki response time yang sama.
-Selanjutnya pada bagian number of users pada 50 spawnrate terlihat untuk mencapai dari 0 hingga 1000 users membutuhkan waktu yang sedikit lebih lama dibandingkan 100 spawnrate.
-
+- 100.0% MyUser: Keseluruhan beban kerja atau permintaan sepenuhnya berasal dari kelas pengguna "MyUser."
+- 50.0% get_orders: Separuh dari seluruh beban kerja terdiri dari metode atau permintaan "get_orders."
+- 50.0% create_order: Separuh sisanya berasal dari metode atau permintaan "create_order."
 
 ## vi. Kesimpulan dan Saran
 Kesimpulan rancangan cloud dan aplikasi melibatkan langkah-langkah penting, seperti membuat database dan connection string, menciptakan koneksi baru dengan string database yang sudah ada, serta menciptakan database baru melalui MongoDB Compass dengan data dummy. Proses ini melibatkan instalasi MongoDB, load balancer, dan worker. Selain itu, langkah kedua melibatkan pengunduhan dan eksekusi app.py dari GitHub, dengan penyesuaian API MongoDB. Keseluruhan, rancangan ini fokus pada integrasi efisien antara aplikasi dan layanan cloud untuk memastikan fungsi yang optimal.
