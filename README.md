@@ -39,19 +39,28 @@ Berikut adalah tabel Harga Spesifikasi VM dari Digital Oceon  :
 
 ![fp-3.jpeg](Final%20Project%20Teknologi%20Komputasi%20Awan%20Kelas%20B%20Kel%2060b232652434444d9c28bbb509c3b1e0/fp-3.jpeg)
 
-3. Membuat Database yang sudah dibuat di app.py
+3. Membuat Database yang sudah dibuat orders_db dan collectionnya serta create data dummy ke collection orders_db melalui mongodb compass 
 
 ![fp-4.jpeg](Final%20Project%20Teknologi%20Komputasi%20Awan%20Kelas%20B%20Kel%2060b232652434444d9c28bbb509c3b1e0/fp-4.jpeg)
 
-4. Create database baru dengan cara copy data dummy ke mongodb compass 
+4. Membuat droplet dan load balancer
+![4.png](Final%20Project%20Teknologi%20Komputasi%20Awan%20Kelas%20B%20Kel%2060b232652434444d9c28bbb509c3b1e0/4.png)
 
-5. Download app.py, Run [app.py](http://app.py) dari github, serta mengganti mongodb API-nya
+5. Download app.py, ganti mongodb url nya sesuai dengan connection string mongodb kita, run [app.py](http://app.py) dari github menggunakan gunicorn di setiap worker kita dengan port 80 (harus sama dengan load-balancer).
 
 ![fp-5.jpeg](Final%20Project%20Teknologi%20Komputasi%20Awan%20Kelas%20B%20Kel%2060b232652434444d9c28bbb509c3b1e0/fp-5.jpeg)
 
-6. Check kalau sudah berhasil install mongodb, load balancer dan worker
+menurut dokumentasi Gunicorn, jumlah worker yang optimal adalah (2 * numofcpucore) + 1.
 
-![fp-1.jpeg](Final%20Project%20Teknologi%20Komputasi%20Awan%20Kelas%20B%20Kel%2060b232652434444d9c28bbb509c3b1e0/fp-1.jpeg)
+6. kita arahkan alamat health checks load balancer kita ke Endpoint agar load balancer dapat terhubung dengan [app.py](http://app.py) yang ada di worker
+
+![6.jpeg](Final%20Project%20Teknologi%20Komputasi%20Awan%20Kelas%20B%20Kel%2060b232652434444d9c28bbb509c3b1e0/6.jpeg)
+worker masih down
+![7.jpeg](Final%20Project%20Teknologi%20Komputasi%20Awan%20Kelas%20B%20Kel%2060b232652434444d9c28bbb509c3b1e0/7.jpeg)
+ganti alamat health check
+![8.jpeg](Final%20Project%20Teknologi%20Komputasi%20Awan%20Kelas%20B%20Kel%2060b232652434444d9c28bbb509c3b1e0/8.jpeg)
+Load balancer sudah bekerja
+
 
 ## iv. Hasil Pengujian endpoint setiap API
 
@@ -77,81 +86,49 @@ Berikut adalah tabel Harga Spesifikasi VM dari Digital Oceon  :
 
 ## v. Hasil Pengujian dan analisis Loadtesting menggunakan Locust
 - **1500 User, 25 Spawn rate, 60s**
-  <br />
-  a) Request Statistics & Response Time Statistics
-  <br />
-     <img width="1024" alt="Screenshot 2023-12-18 at 08 36 10" src="https://github.com/stephaniehebrina/finalproject-b5/assets/143694784/3129db9d-89c0-42b2-a5a4-a5525b0805e0">
 
-  <br />
-  Request Statics : hasil dari pengujian kinerja menggunakan Locust, sebuah alat uji beban dan kinerja open-source yang umumnya digunakan untuk mengukur sejauh mana sistem dapat menangani beban tertentu, Response Time Statistics : memberikan gambaran tentang berbagai persentil (percentiles) waktu yang diperlukan untuk menanggapi permintaan pada suatu endpoint atau sumber daya tertentu
-  <br />
+  a) Peak RPS
 
-  b) Charts
-  <br />
-  <img width="538" alt="Screenshot 2023-12-18 at 08 53 12" src="https://github.com/stephaniehebrina/finalproject-b5/assets/143694784/c904af77-c74f-4a5f-921c-5bb7ec75f66e">
-  <br /> 
-  c) Ratio per User class (Rasio per Kelas Pengguna):
+![25_PeakRPS.png](Final%20Project%20Teknologi%20Komputasi%20Awan%20Kelas%20B%20Kel%2060b232652434444d9c28bbb509c3b1e0/25_PeakRPS.png)
 
-- 100.0% MyUser: Semua beban kerja atau permintaan berasal dari kelas pengguna "MyUser."
-- 50.0% get_orders: Separuh dari beban kerja berasal dari metode atau permintaan "get_orders."
-- 50.0% create_order: Separuh sisanya berasal dari metode atau permintaan "create_order."
-<br />
- Total ratio (Total Rasio):
+  b) Peak Concurrency
 
-- 100.0% MyUser: Keseluruhan beban kerja atau permintaan sepenuhnya berasal dari kelas pengguna "MyUser."
-- 50.0% get_orders: Separuh dari seluruh beban kerja terdiri dari metode atau permintaan "get_orders."
-- 50.0% create_order: Separuh sisanya berasal dari metode atau permintaan "create_order."
+![25_PeakConcurrency.png](Final%20Project%20Teknologi%20Komputasi%20Awan%20Kelas%20B%20Kel%2060b232652434444d9c28bbb509c3b1e0/25_PeakConcurrency.png)
+
+  c) Hasil
+- RPS maksimum yang didapatkan pada tes ini adalah 118.1
+- Concurrency max yang didapat adalah 1500 users
+
+##
 
 - **3000 user, 50 Spawn rate, 60s**
- <br />
-  a) Request Statistics & Response Time Statistics
-  <br />
-<img width="1024" alt="Screenshot 2023-12-18 at 08 49 32" src="https://github.com/stephaniehebrina/finalproject-b5/assets/143694784/49907113-bb2e-424f-89d9-2b839cf29905">
 
-  <br />
-  Request Statics : hasil dari pengujian kinerja menggunakan Locust, sebuah alat uji beban dan kinerja open-source yang umumnya digunakan untuk mengukur sejauh mana sistem dapat menangani beban tertentu, Response Time Statistics : memberikan gambaran tentang berbagai persentil (percentiles) waktu yang diperlukan untuk menanggapi permintaan pada suatu endpoint atau sumber daya tertentu
-  <br />
-  b) Charts
-  <br />
-  <img width="538" alt="Screenshot 2023-12-18 at 08 52 23" src="https://github.com/stephaniehebrina/finalproject-b5/assets/143694784/57ee485f-63d6-4528-b4ec-883f20c31736">
+  a) Peak RPS
 
-  <br /> 
-  c) Ratio per User class (Rasio per Kelas Pengguna):
+![50_PeakRPS.png](Final%20Project%20Teknologi%20Komputasi%20Awan%20Kelas%20B%20Kel%2060b232652434444d9c28bbb509c3b1e0/50_PeakRPS.png)
 
-- 100.0% MyUser: Semua beban kerja atau permintaan berasal dari kelas pengguna "MyUser."
-- 50.0% get_orders: Separuh dari beban kerja berasal dari metode atau permintaan "get_orders."
-- 50.0% create_order: Separuh sisanya berasal dari metode atau permintaan "create_order."
-<br />
- Total ratio (Total Rasio):
+  b) Peak Concurrency
 
-- 100.0% MyUser: Keseluruhan beban kerja atau permintaan sepenuhnya berasal dari kelas pengguna "MyUser."
-- 50.0% get_orders: Separuh dari seluruh beban kerja terdiri dari metode atau permintaan "get_orders."
-- 50.0% create_order: Separuh sisanya berasal dari metode atau permintaan "create_order."
-  
+![50_PeakConcurrency.png](Final%20Project%20Teknologi%20Komputasi%20Awan%20Kelas%20B%20Kel%2060b232652434444d9c28bbb509c3b1e0/50_PeakConcurrency.png)
+
+  c) Hasil
+- RPS maksimum yang didapatkan pada tes ini adalah 149
+- Concurrency max yang didapat adalah 2923 users
+
 - **6000 user, 100 spawn rate, 60 sec**
-- a) Request Statistics & Response Time Statistics
-  <br />
-<img width="1024" alt="Screenshot 2023-12-18 at 08 50 24" src="https://github.com/stephaniehebrina/finalproject-b5/assets/143694784/d6f7558a-45d1-4626-921a-a70c633202b0">
-  <br />
-  Request Statics : hasil dari pengujian kinerja menggunakan Locust, sebuah alat uji beban dan kinerja open-source yang umumnya digunakan untuk mengukur sejauh mana sistem dapat menangani beban tertentu, Response Time Statistics : memberikan gambaran tentang berbagai persentil (percentiles) waktu yang diperlukan untuk menanggapi permintaan pada suatu endpoint atau sumber daya tertentu
-  <br />
-  b) Charts
-  <br />
-  <img width="538" alt="Screenshot 2023-12-18 at 08 51 28" src="https://github.com/stephaniehebrina/finalproject-b5/assets/143694784/27081a06-698f-4aac-937e-e7557c11b2e7">
+  a) Peak RPS
 
-  <br /> 
-  c) Ratio per User class (Rasio per Kelas Pengguna):
+![100_PeakRPS.png](Final%20Project%20Teknologi%20Komputasi%20Awan%20Kelas%20B%20Kel%2060b232652434444d9c28bbb509c3b1e0/100_PeakRPS.png)
 
-- 100.0% MyUser: Semua beban kerja atau permintaan berasal dari kelas pengguna "MyUser."
-- 50.0% get_orders: Separuh dari beban kerja berasal dari metode atau permintaan "get_orders."
-- 50.0% create_order: Separuh sisanya berasal dari metode atau permintaan "create_order."
-<br />
- Total ratio (Total Rasio):
+  b) Peak Concurrency
 
-- 100.0% MyUser: Keseluruhan beban kerja atau permintaan sepenuhnya berasal dari kelas pengguna "MyUser."
-- 50.0% get_orders: Separuh dari seluruh beban kerja terdiri dari metode atau permintaan "get_orders."
-- 50.0% create_order: Separuh sisanya berasal dari metode atau permintaan "create_order."
+![100_PeakConcurrency.png](Final%20Project%20Teknologi%20Komputasi%20Awan%20Kelas%20B%20Kel%2060b232652434444d9c28bbb509c3b1e0/100_PeakConcurrency.png)
+
+  c) Hasil
+- RPS maksimum yang didapatkan pada tes ini adalah 175
+- Concurrency max yang didapat adalah 6000 users
 
 ## vi. Kesimpulan dan Saran
-Kesimpulan rancangan cloud dan aplikasi melibatkan langkah-langkah penting, seperti membuat database dan connection string, menciptakan koneksi baru dengan string database yang sudah ada, serta menciptakan database baru melalui MongoDB Compass dengan data dummy. Proses ini melibatkan instalasi MongoDB, load balancer, dan worker. Selain itu, langkah kedua melibatkan pengunduhan dan eksekusi app.py dari GitHub, dengan penyesuaian API MongoDB. Keseluruhan, rancangan ini fokus pada integrasi efisien antara aplikasi dan layanan cloud untuk memastikan fungsi yang optimal.
+
+Kesimpulan: Merancang cloud melibatkan langkah-langkah penting, seperti menyesuaikan spesifikasi **Droplet**, **Load-balancer**, dan **Database** secara matang. Tujuannya adalah untuk menciptakan arsitektur cloud yang stabil dan memiliki keandalan yang baik sesuai dengan anggaran yang ditentukan **(65$/bulan)**. Hasil yang kami peroleh dari rancangan arsitektur cloud kami menunjukkan **stabilitas** yang tinggi, dengan tingkat kegagalan saat diuji menggunakan **Locust** mencapai 0%, dan **RPS** tertinggi mencapai 175.
 
